@@ -1,4 +1,4 @@
 
 ## Spring Boot Back End
 
-> This is a sumary for the whole work
+> This is a summary for the whole work
