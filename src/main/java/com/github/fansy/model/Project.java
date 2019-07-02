@@ -15,8 +15,6 @@
  */
 package com.github.fansy.model;
 
-import lombok.Data;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -25,11 +23,10 @@ import javax.persistence.Id;
  * @author Greg Turnquist
  */
 // tag::code[]
-@Data
 @Entity
 public class Project {
 
-	private @Id @GeneratedValue Long id;
+	private @Id Long id;
 	private String name;
 	private String hideName;
 	private String hidePath;
@@ -37,11 +34,51 @@ public class Project {
 
 	private Project() {}
 
-	public Project(long id , String name, String hideName, String hidePath, String url){
+	public Project( long id,String name, String hideName, String hidePath, String url){
 		this.id = id ;
 		this.name = name;
 		this.hideName = hideName;
 		this.hidePath = hidePath;
+		this.url = url;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getHideName() {
+		return hideName;
+	}
+
+	public void setHideName(String hideName) {
+		this.hideName = hideName;
+	}
+
+	public String getHidePath() {
+		return hidePath;
+	}
+
+	public void setHidePath(String hidePath) {
+		this.hidePath = hidePath;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
 		this.url = url;
 	}
 }

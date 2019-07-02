@@ -35,7 +35,7 @@ public class DataProjectLoader implements CommandLineRunner {
 
 	@Override
 	public void run(String... strings) throws Exception {
-		this.repository.save(new Project(1,"示例项目","example_project",
+		this.repository.save(new Project(1,"示例项目","demo",
 				"/Users/fanzhe/projects/fansy_githubs/tut-react-and-spring-data-rest",
 				"http://localhost:8081/index.html"));
 	}
