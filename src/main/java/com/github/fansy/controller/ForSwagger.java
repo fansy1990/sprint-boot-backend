@@ -13,36 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.fansy.model;
+package com.github.fansy.controller;
 
-import lombok.Data;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Greg Turnquist
  */
 // tag::code[]
-@Entity
-@Data
-public class Project {
 
-	private @Id Long id;
-	private String name;
-	private String hideName;
-	private String hidePath;
-	private String url;
+@RestController
+public class ForSwagger {
 
-	private Project() {}
+	@RequestMapping(path = "/v2/test", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public Map<String,String> index() {
+		Map<String, String> data = new HashMap() {
+			{
+				put("1","1");
+				put("2","two");
+			}
 
-	public Project( long id,String name, String hideName, String hidePath, String url){
-		this.id = id ;
-		this.name = name;
-		this.hideName = hideName;
-		this.hidePath = hidePath;
-		this.url = url;
+		};
+		return data;
 	}
 
 }
