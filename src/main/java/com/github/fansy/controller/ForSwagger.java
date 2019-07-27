@@ -43,5 +43,18 @@ public class ForSwagger {
 		return data;
 	}
 
+	@RequestMapping(path = "/v2/test1", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public Map<String,String> index1() {
+		Map<String, String> data = new HashMap() {
+			{
+				put("1","one");
+				put("2","two");
+			}
+
+		};
+		return data;
+	}
+
+
 }
 // end::code[]
