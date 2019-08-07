@@ -13,7 +13,7 @@
 
     <groupId>before-work</groupId>
     <artifactId>back-end</artifactId>
-    <version>0.2</version>
+    <version>0.3</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -90,12 +90,12 @@
     <repository>  
         <id>local-maven-releases</id>  
         <name>Maven Release Repository</name>  
-        <url>http://192.168.0.104:8081/repository/maven-releases/</url>
+        <url>http://10.10.1.6:8081/repository/maven-releases/</url>
     </repository>  
     <snapshotRepository>  
         <id>local-maven-snapshots</id>  
         <name>Maven Snapshot Repository</name>  
-        <url>http://192.168.0.104:8081/repository/maven-snapshots/</url>
+        <url>http://10.10.1.6:8081/repository/maven-snapshots/</url>
     </snapshotRepository>  
 </distributionManagement>
 
